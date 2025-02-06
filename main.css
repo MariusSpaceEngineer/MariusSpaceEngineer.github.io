@@ -22,11 +22,93 @@ main {
 }
 
 main .content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
   border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
-  width: 89vw;
+  width: 90vw;
   margin: 0 auto;
+}
+
+main .content .left-content {
+  margin-left: 3.5rem;
+}
+
+main .content {
+  font-family: "Montserrat", serif;
+}
+
+main .content .title {
+  font-weight: 100;
+  font-size: 6em;
+}
+
+main .content .sub-title {
+  font-size: 3em;
+  margin-left: 1rem;
+}
+
+main .content .cube {
+  margin-left: -3rem;
+  width: 250px;
+  height: 250px;
+}
+
+main .content .right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  position: relative;
+}
+
+main .content .right-content p {
+  font-size: 1.5em;
+}
+
+main .content .right-content button {
+  border-radius: 60px;
+  border: none;
+  font-size: 1.2em;
+  background-color: #395886;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: white;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  main .content {
+    grid-template-columns: 1fr;
+  }
+
+  main .content .left-content {
+    margin-left: 2rem;
+  }
+
+  main .content .title {
+    font-size: 3.5em;
+  }
+
+  main .content .sub-title {
+    font-size: 2em;
+  }
+
+  main .content .cube {
+    width: 150px;
+    height: 150px;
+    margin-left: -2rem;
+  }
+
+  main .content .right-content {
+    justify-content: flex-start;
+    margin-left: 2rem;
+  }
+
+  main .content .right-content p {
+    text-align: center;
+    font-size: 1.2em;
+  }
 }
