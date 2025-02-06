@@ -1,0 +1,32 @@
+main {
+  height: 90vh;
+  background-color: #d5deef;
+}
+
+.left-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5vw;
+  height: 100vh;
+  background-color: #f0f3fa;
+}
+
+.right-border {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5vw;
+  height: 100vh;
+  background-color: #f0f3fa;
+}
+
+main .content {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 89vw;
+  margin: 0 auto;
+}
