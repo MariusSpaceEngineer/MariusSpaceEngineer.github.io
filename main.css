@@ -1,6 +1,9 @@
 main {
-  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
   background-color: #d5deef;
+  position: relative;
 }
 
 .left-border {
@@ -8,7 +11,7 @@ main {
   left: 0;
   top: 0;
   width: 5vw;
-  height: 100vh;
+  height: 90vh;
   background-color: #f0f3fa;
 }
 
@@ -17,7 +20,7 @@ main {
   right: 0;
   top: 0;
   width: 5vw;
-  height: 100vh;
+  height: 90vh;
   background-color: #f0f3fa;
 }
 
@@ -46,22 +49,23 @@ main .content {
 }
 
 .buttom-button {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1.5rem;
+  align-self: center;
   width: 30vw;
-  height: 10vh;
-  left: 49%;
-  transform: translateX(-50%);
+  height: 8vh;
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   background-color: #f0f3fa;
 }
 
 .buttom-button .arrow {
   position: relative;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 35px;
-  height: 35px;
+  width: 50%;
+  height: 50%;
 }
 
 main .content .title {
@@ -87,16 +91,16 @@ main .content .cube {
 main .content .left-content .figures {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  height: 20vh;
-  width: 80%;
-  position: relative;
-  top: -2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: auto;
+  width: 100%;
 }
 
 main .content .left-content .figures > * {
-  width: 150px;
-  height: 150px;
+  width: 20%;
+  flex-grow: 1; /* Allow the child elements to grow */
+  margin: 0 0.5rem; /* Add some spacing between the elements */
 }
 
 main .content .left-content .figures .cross_two {
@@ -119,6 +123,8 @@ main .content .right-content {
 }
 main .content .right-content p {
   font-size: 1.5em;
+  text-align: center;
+  padding: 0 2.5rem;
 }
 
 main .content .right-content button {
@@ -126,7 +132,7 @@ main .content .right-content button {
   border: none;
   font-size: 1.2em;
   background-color: #395886;
-  margin: 1rem 0;
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
   color: white;
   align-self: center;
@@ -156,22 +162,14 @@ main .content .right-content button {
   }
 
   main .content .right-content {
-    justify-content: flex-start;
-    margin-left: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%; /* Adjust this value to position it lower on the screen */
+    width: 70%; /* Ensure it takes the full width */
   }
 
   main .content .right-content p {
-    text-align: center;
     font-size: 1.2em;
-  }
-
-  main .content .left-content .figures > * {
-    width: 150px;
-    height: 150px;
-    margin-left: -2rem;
-  }
-
-  main .content .left-content .figures {
-    margin-left: -2rem;
   }
 }
