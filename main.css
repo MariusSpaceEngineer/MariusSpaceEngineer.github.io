@@ -1,5 +1,5 @@
 main {
-  height: 90vh;
+  height: 85vh;
   background-color: #d5deef;
 }
 
@@ -21,12 +21,18 @@ main {
   background-color: #f0f3fa;
 }
 
+.buttom-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5vh;
+  background-color: #f0f3fa;
+}
+
 main .content {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 1rem;
-  border: 1px solid black;
-  height: 100%;
+  grid-template-columns: 2fr 1fr;
   width: 90vw;
   margin: 0 auto;
 }
@@ -39,20 +45,68 @@ main .content {
   font-family: "Montserrat", serif;
 }
 
+.buttom-button {
+  position: relative;
+  width: 30vw;
+  height: 10vh;
+  left: 49%;
+  transform: translateX(-50%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background-color: #f0f3fa;
+}
+
+.buttom-button .arrow {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+}
+
 main .content .title {
   font-weight: 100;
   font-size: 6em;
+  position: relative;
+  top: -3rem;
 }
 
 main .content .sub-title {
   font-size: 3em;
   margin-left: 1rem;
+  position: relative;
+  top: -3rem;
 }
 
 main .content .cube {
   margin-left: -3rem;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
+}
+
+main .content .left-content .figures {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 20vh;
+  width: 80%;
+  position: relative;
+  top: -2rem;
+}
+
+main .content .left-content .figures > * {
+  width: 150px;
+  height: 150px;
+}
+
+main .content .left-content .figures .cross_two {
+  position: relative;
+  top: 50px;
+}
+
+main .content .left-content .figures .piramid_two {
+  position: relative;
+  top: 25px;
 }
 
 main .content .right-content {
@@ -63,7 +117,6 @@ main .content .right-content {
   margin-right: 3rem;
   position: relative;
 }
-
 main .content .right-content p {
   font-size: 1.5em;
 }
@@ -110,5 +163,15 @@ main .content .right-content button {
   main .content .right-content p {
     text-align: center;
     font-size: 1.2em;
+  }
+
+  main .content .left-content .figures > * {
+    width: 150px;
+    height: 150px;
+    margin-left: -2rem;
+  }
+
+  main .content .left-content .figures {
+    margin-left: -2rem;
   }
 }
