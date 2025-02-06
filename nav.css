@@ -36,7 +36,7 @@ nav::after {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  padding-right: 10vw;
+  margin-right: 10vw;
 }
 .hamburger div {
   width: 25px;
@@ -50,6 +50,9 @@ nav::after {
 @media (max-width: 768px) {
   nav {
     clip-path: none;
+  }
+  .nav-left {
+    margin-left: 0;
   }
   .nav-right {
     display: none;
