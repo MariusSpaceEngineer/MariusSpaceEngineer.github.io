@@ -1,11 +1,12 @@
 nav {
+  position: sticky;
+  top: 0;
   font-family: "Montserrat", serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f0f3fa;
   padding: 10px 20px;
-  position: relative;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   width: 90%;
   height: 10vh;
@@ -24,6 +25,12 @@ nav::after {
 .nav-left {
   margin-left: 10vw;
 }
+
+.nav-left a {
+  text-decoration: none;
+  color: black;
+}
+
 .nav-right {
   list-style: none;
   display: flex;
