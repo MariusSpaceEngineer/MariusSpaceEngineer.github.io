@@ -120,6 +120,7 @@ main .content .right-content {
   justify-content: flex-end;
   margin-right: 3rem;
   position: relative;
+  bottom: 10%;
 }
 main .content .right-content p {
   font-size: 1.5em;
