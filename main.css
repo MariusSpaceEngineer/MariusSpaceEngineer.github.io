@@ -130,7 +130,7 @@ main .content .right-content p {
   padding: 0 2.5rem;
 }
 
-main .content .right-content button {
+main .content .right-content .main-button {
   border-radius: 60px;
   border: none;
   font-size: 1.2em;
@@ -139,6 +139,11 @@ main .content .right-content button {
   padding: 0.5rem 1rem;
   color: white;
   align-self: center;
+}
+
+main .content .right-content .main-button a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 768px) {
