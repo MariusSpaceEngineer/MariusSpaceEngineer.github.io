@@ -17,9 +17,9 @@
 .contact_section .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-weight: 200;
+  width: 50vw;
+  margin: 0 auto;
 }
 
 .contact_section .form label {
@@ -28,18 +28,18 @@
 
 .contact_section .form input {
   border-radius: 10px;
-  width: 40vw;
+  width: 100%;
   height: 5vh;
-  margin: 1rem;
+  margin: 1rem auto;
   padding: 0.5rem;
   border: 1px solid #f0f3fa;
 }
 
 .contact_section .form textarea {
   border-radius: 10px;
-  width: 40vw;
+  width: 100%;
   height: 30vh;
-  margin: 1rem;
+  margin: 1rem auto;
   padding: 0.5rem;
   border: 1px solid #f0f3fa;
 }
@@ -47,10 +47,23 @@
 .contact_section .form button {
   border-radius: 60px;
   border: none;
-  font-size: 1.2em;
+  font-size: 1.5em;
   background-color: #395886;
   margin-top: 1rem;
-  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 5rem;
   color: white;
   align-self: center;
+}
+
+@media (max-width: 768px) {
+  .contact_section .heading {
+    font-size: 3em;
+    right: 20vw;
+  }
+
+  .contact_section .form button {
+    font-size: 1.2em;
+    padding: 0.5rem 2rem;
+  }
 }
