@@ -13,6 +13,9 @@
   justify-content: space-between;
   margin-top: 5vh;
   gap: 10vw;
+  border: 10px solid #f1f3fa;
+  border-radius: 20px;
+  padding: 5vh 5vw;
 }
 
 .work_section .work-item .content {
@@ -28,10 +31,10 @@
 .work_section .work-item .content button {
   border-radius: 60px;
   border: none;
-  font-size: 1.2em;
+  font-size: 1.3em;
   background-color: #395886;
   margin-top: 2rem;
-  padding: 0.5rem 2rem;
+  padding: 1.5rem 2rem;
   width: fit-content;
   color: white;
 }
@@ -58,5 +61,26 @@
 
   .work_section .heading {
     font-size: 3em;
+  }
+
+  .work_section .work-item img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    object-position: top; /* Position the image at the top */
+    object-fit: scale-down;
+  }
+
+  .work_section .work-item .content button {
+    border-radius: 60px;
+    border: none;
+    font-size: 1.2em;
+    background-color: #395886;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    color: white;
+  }
+
+  .work_section .work-item {
+    padding: 2vh 5vw;
   }
 }
