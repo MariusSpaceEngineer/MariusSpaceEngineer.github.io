@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f3fa;
+  height: 10vh;
+  width: 90%;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #f0f3fa;
+  height: 10vh;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  padding: 10px 20px;
+  text-align: center;
+}
