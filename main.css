@@ -95,6 +95,8 @@ main .content .left-content .figures {
   align-items: flex-start;
   height: auto;
   width: 100%;
+  position: relative;
+  bottom: 5%;
 }
 
 main .content .left-content .figures > * {
