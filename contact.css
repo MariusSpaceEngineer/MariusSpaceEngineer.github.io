@@ -1,0 +1,56 @@
+.contact_section {
+  font-family: "Montserrat", serif;
+  text-align: center;
+  height: auto;
+  background-color: #d5deef;
+}
+
+.contact_section .heading {
+  font-weight: 100;
+  font-size: 5em;
+  position: relative;
+  right: 25vw;
+  rotate: -30deg;
+  padding-top: 15vh;
+}
+
+.contact_section .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+
+.contact_section .form label {
+  font-size: 1.2em;
+}
+
+.contact_section .form input {
+  border-radius: 10px;
+  width: 40vw;
+  height: 5vh;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #f0f3fa;
+}
+
+.contact_section .form textarea {
+  border-radius: 10px;
+  width: 40vw;
+  height: 30vh;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #f0f3fa;
+}
+
+.contact_section .form button {
+  border-radius: 60px;
+  border: none;
+  font-size: 1.2em;
+  background-color: #395886;
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  color: white;
+  align-self: center;
+}

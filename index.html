@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="biography.css" />
+    <link rel="stylesheet" href="contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +30,7 @@
       <ul class="nav-right">
         <li><a href="#about">About</a></li>
         <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <main>
@@ -74,11 +75,50 @@
       </div>
       <img src="./images/biography.png" />
     </section>
+
+    <section id="contact" class="contact_section">
+      <h1 class="heading">Let's Connect</h1>
+      <form id="contact-form" class="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Message"
+          required
+        ></textarea>
+        <button type="submit" id="send-button">Send</button>
+      </form>
+    </section>
+
     <script>
       document
         .getElementById("menu-toggle")
         .addEventListener("change", function () {
           console.log("Hamburger menu toggled");
+        });
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          const mailtoLink = `mailto:your-email@example.com?subject=New message from ${name}&body=${message} %0D%0A${name}%0D%0A${email}`;
+
+          window.location.href = mailtoLink;
         });
     </script>
   </body>
