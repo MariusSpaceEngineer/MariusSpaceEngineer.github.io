@@ -64,6 +64,7 @@
   }
 
   .work_section .work-item img {
+    height: 40vh;
     width: 100%; /* Ensure the image takes the full width of its container */
     object-position: top; /* Position the image at the top */
     object-fit: scale-down;
@@ -82,5 +83,6 @@
 
   .work_section .work-item {
     padding: 2vh 5vw;
+    gap: 2vh;
   }
 }
