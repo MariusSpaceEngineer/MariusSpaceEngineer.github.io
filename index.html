@@ -35,6 +35,8 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    
     <main>
       <div class="left-border"></div>
       <div class="content">
@@ -129,28 +131,9 @@
     </section>
     <footer>
       <p>&copy; 2025 Marius Stoica</p>
+      <p><a href="https://linktr.ee/marius.daniel.stoica?utm_source=linktree_profile_share&ltsid=92c42e75-21b3-4374-8521-d87be95709a3">Linktree</a></p>
     </footer>
 
-    <script>
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("change", function () {
-          console.log("Hamburger menu toggled");
-        });
-
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent the default form submission
-
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const message = document.getElementById("message").value;
-
-          const mailtoLink = `mailto:your-email@example.com?subject=New message from ${name}&body=${message} %0D%0A${name}%0D%0A${email}`;
-
-          window.location.href = mailtoLink;
-        });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
