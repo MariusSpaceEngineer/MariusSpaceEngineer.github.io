@@ -1,16 +1,4 @@
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f3fa;
-  height: 10vh;
-  width: 90%;
-  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
-  padding: 10px 20px;
-  text-align: center;
-}
-
-footer {
   background-color: #f0f3fa;
   height: 10vh;
   width: 90%;
@@ -19,4 +7,14 @@ footer {
   clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
   padding: 10px 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #395886;
+  font-weight: 600;
 }
