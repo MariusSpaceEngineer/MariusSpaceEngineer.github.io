@@ -46,7 +46,7 @@
 
 .work_section .work-item img {
   width: 100%;
-  height: 80vh;
+  height: 60vh;
 }
 
 @media (max-width: 768px) {

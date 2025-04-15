@@ -70,7 +70,7 @@ nav::after {
     width: 100%;
     background-color: #f0f3fa;
     position: absolute;
-    top: 70%; /* Ensure the menu is displayed below the navbar */
+    top: 80%; /* Ensure the menu is displayed below the navbar */
     left: 0;
     padding: 0; /* Reset padding of the ul */
   }
@@ -79,6 +79,7 @@ nav::after {
     padding: 10px 0;
     border-bottom: 2px solid #e1e7f7;
   }
+
   .nav-right li:last-child {
     border-bottom: none;
   }
