@@ -34,3 +34,24 @@ document
     const mailtoLink = `mailto:stoicamarius9010@gmail.com?subject=Message from ${name} via Portfolio Website&body=${message} %0D%0A${name}%0D%0A${email}`;
     window.location.href = mailtoLink;
   });
+
+document.querySelectorAll(".nav-right a").forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    const targetId = this.getAttribute("href").substring(1); // Get the target section ID
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const offset = 80; // Adjust this value to match your nav height or desired offset
+      const elementPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth", // Smooth scrolling
+      });
+    }
+  });
+});
