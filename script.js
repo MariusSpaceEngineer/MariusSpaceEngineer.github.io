@@ -55,3 +55,25 @@ document.querySelectorAll(".nav-right a").forEach((link) => {
     }
   });
 });
+
+document
+  .querySelector(".main-button a")
+  .addEventListener("click", function (event) {
+    console.log("Main button clicked"); // Log when the main button is clicked
+    event.preventDefault(); // Prevent default anchor behavior
+
+    const targetId = this.getAttribute("href").substring(1); // Get the target section ID
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const offset = 80; // Adjust this value to match your nav height or desired offset
+      const elementPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth", // Smooth scrolling
+      });
+    }
+  });
