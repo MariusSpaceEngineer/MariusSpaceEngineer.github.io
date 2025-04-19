@@ -57,7 +57,7 @@ document.querySelectorAll(".nav-right a").forEach((link) => {
 });
 
 document
-  .querySelector(".main-button a")
+  .querySelector(".main-button")
   .addEventListener("click", function (event) {
     console.log("Main button clicked"); // Log when the main button is clicked
     event.preventDefault(); // Prevent default anchor behavior
