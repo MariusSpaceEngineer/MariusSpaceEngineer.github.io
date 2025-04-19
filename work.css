@@ -28,7 +28,7 @@
   font-size: 1.2em;
 }
 
-.work_section .work-item .content button {
+.work_section .work-item .content a {
   border-radius: 60px;
   border: none;
   font-size: 1.3em;
@@ -36,10 +36,6 @@
   margin-top: 2rem;
   padding: 1.5rem 2rem;
   width: fit-content;
-  color: white;
-}
-
-.work_section .work-item .content button a {
   color: white;
   text-decoration: none;
 }
@@ -55,22 +51,18 @@
     gap: 5vh;
   }
 
-  .work_section .work-item .content button {
-    align-self: center;
-  }
-
   .work_section .heading {
     font-size: 3em;
   }
 
   .work_section .work-item img {
-    height: 40vh;
+    height: 50vh;
     width: 100%; /* Ensure the image takes the full width of its container */
     object-position: top; /* Position the image at the top */
     object-fit: scale-down;
   }
 
-  .work_section .work-item .content button {
+  .work_section .work-item .content a {
     border-radius: 60px;
     border: none;
     font-size: 1.2em;
@@ -79,6 +71,7 @@
     padding: 0.5rem 2rem;
     width: fit-content;
     color: white;
+    align-self: center;
   }
 
   .work_section .work-item {

@@ -19,55 +19,64 @@
     />
   </head>
   <body>
-    <nav>
-      <div class="nav-left">
-        <a href="#">Marius Stoica - Software Engineer</a>
-      </div>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </label>
-      <ul class="nav-right">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <a href="#">Marius Stoica - Software Engineer</a>
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+        <ul class="nav-right">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    
     <main>
       <div class="left-border"></div>
-      <div class="content">
-        <div class="left-content">
-          <img class="cube" src="./images/main_cube.svg" />
+      <section class="content">
+        <aside class="left-content">
+          <img class="cube" src="./images/main_cube.svg" alt="Cube graphic" />
           <h1 class="title">Crafting Code</h1>
           <h2 class="sub-title">Building Futures</h2>
           <div class="figures">
-            <img class="cross_one" src="./images/main_cross_one.png" />
-            <img class="cross_two" src="./images/main_cross_two.png" />
-            <img class="piramid_one" src="./images/main_piramid_one.png" />
-            <img class="piramid_two" src="./images/main_piramid_two.png" />
+            <img class="cross_one" src="./images/main_cross_one.png" alt="" />
+            <img class="cross_two" src="./images/main_cross_two.png" alt="" />
+            <img
+              class="piramid_one"
+              src="./images/main_piramid_one.png"
+              alt="Piramid graphic"
+            />
+            <img
+              class="piramid_two"
+              src="./images/main_piramid_two.png"
+              alt="Piramid graphic"
+            />
           </div>
-        </div>
-        <div class="right-content">
+        </aside>
+        <section class="right-content">
           <p>
             A passionate Software Engineer ready to roll up his sleeves for
             those in need.
           </p>
-          <button class="main-button"><a href="#contact">Contact me</a></button>
-        </div>
-      </div>
+          <a class="main-button" href="#contact">Contact me</a>
+        </section>
+      </section>
       <div class="right-border"></div>
       <div class="buttom-button">
-        <img class="arrow" src="./images/main_arrow.svg" />
+        <img class="arrow" src="./images/main_arrow.svg" alt="Down arrow" />
       </div>
       <div class="buttom-border"></div>
     </main>
 
     <section id="about" class="biography_section">
-      <div class="content">
+      <article class="content">
         <h1 class="heading">Hello I’m Marius</h1>
         <p class="name">Marius Stoica</p>
         <p class="description">
@@ -76,13 +85,13 @@
           open to collaborating with anyone in need of a software solution for
           their technological needs.
         </p>
-      </div>
-      <img src="./images/biography.png" />
+      </article>
+      <img src="./images/biography.png" alt="Biography image" />
     </section>
 
     <section id="work" class="work_section">
       <h1 class="heading">My Work</h1>
-      <div class="work">
+      <article class="work">
         <div class="work-item">
           <div class="content">
             <h2>NEPSIS Belgium</h2>
@@ -98,12 +107,16 @@
               This project significantly enhanced NEPSIS's online presence and
               operational efficiency.
             </p>
-            <button>
-              <a href="https://nepsis.be/">Visit the NEPSIS Project</a>
-            </button>
+            <a target="_blank" href="https://nepsis.be/">
+              Visit the NEPSIS Project
+            </a>
           </div>
-          <img src="./images/work_nepsis.png" />
+          <img
+            src="./images/work_nepsis.png"
+            alt="Screenshot of NEPSIS project"
+          />
         </div>
+      </article>
     </section>
 
     <section id="contact" class="contact_section">
@@ -129,9 +142,15 @@
         <button type="submit" id="send-button">Send</button>
       </form>
     </section>
+
     <footer>
       <p>&copy; 2025 Marius Stoica</p>
-      <p><a href="https://linktr.ee/marius.daniel.stoica?utm_source=linktree_profile_share&ltsid=92c42e75-21b3-4374-8521-d87be95709a3">Linktree</a></p>
+      <p>
+        <a
+          href="https://linktr.ee/marius.daniel.stoica?utm_source=linktree_profile_share&ltsid=92c42e75-21b3-4374-8521-d87be95709a3"
+          >Linktree</a
+        >
+      </p>
     </footer>
 
     <script src="script.js"></script>
