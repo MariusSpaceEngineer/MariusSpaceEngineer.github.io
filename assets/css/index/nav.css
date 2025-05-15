@@ -1,0 +1,52 @@
+nav {
+  /* size & shape of the nav */
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  font-family: "Montserrat", serif;
+  background-color: #f0f3fa;
+  height: 80px; /* to keep the height no matter the screen height */
+  width: 90%;
+
+  /* position of the nav */
+  margin: 0 auto; /* center the nav */
+
+  /* display of items */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw; /* padding left and right to make the items visible  */
+}
+
+nav a {
+  /* remove the default underline */
+  text-decoration: none;
+  color: black;
+}
+
+#navLinks {
+  /* remove the default list style */
+  list-style: none;
+
+  /* change display to flex so the items are in a row */
+  display: flex;
+  gap: 2rem;
+}
+
+#hamburgerIcon {
+  /* when screen is big, hide the hamburger icon */
+  display: none;
+
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  /* when screen is small, hide the nav items */
+  #navLinks {
+    display: none;
+  }
+
+  #hamburgerIcon {
+    /* when screen is small, show the hamburger icon */
+    display: block;
+  }
+}
