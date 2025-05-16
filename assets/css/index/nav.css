@@ -1,14 +1,20 @@
-nav {
-  /* size & shape of the nav */
+header {
+  /* size & shape of the header */
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-  font-family: "Montserrat", serif;
   background-color: #f0f3fa;
   height: 80px; /* to keep the height no matter the screen height */
   width: 90%;
+  margin: 0 auto; /* center the header */
+  padding: 25px 0; /* center the items vertically */
 
-  /* position of the nav */
-  margin: 0 auto; /* center the nav */
+  @media (max-width: 768px) {
+    /* remove the clip-path on small screen as it causes issues with the nav items */
+    clip-path: none;
+    width: 100vw;
+  }
+}
 
+nav {
   /* display of items */
   display: flex;
   justify-content: space-between;
@@ -25,28 +31,76 @@ nav a {
 #navLinks {
   /* remove the default list style */
   list-style: none;
+  /* remove the default padding by browser */
+  padding: 0;
 
   /* change display to flex so the items are in a row */
   display: flex;
   gap: 2rem;
+
+  background-color: #f0f3fa;
+
+  @media (max-width: 768px) {
+    /* shape of the nav */
+    /* when screen is small, hide the nav items */
+    display: none;
+    height: fit-content;
+
+    /* position of the nav items */
+    /* use position absolute to make the items not affect the layout */
+    position: absolute;
+    /* position the items below the nav, the height of the nav is 80px 
+    so this assures is below it */
+    inset: 80px auto auto 0;
+  }
 }
 
-#hamburgerIcon {
+#hamburgerButton {
   /* when screen is big, hide the hamburger icon */
   display: none;
 
+  /* remove the default button style */
+  background: none;
+  border: none;
+  cursor: pointer;
+
   width: 30px;
   height: 30px;
+
+  @media (max-width: 768px) {
+    /* when screen is small, show the hamburger icon */
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
-  /* when screen is small, hide the nav items */
-  #navLinks {
-    display: none;
+  #navLinks li {
+    text-align: center;
+    /* margin: 10px 0; */
+    width: 100vw;
+    padding: 10px 0;
+
+    border-bottom: 2px solid white;
   }
 
-  #hamburgerIcon {
-    /* when screen is small, show the hamburger icon */
+  #navLinks li:first-child {
+    border-top: 2px solid white;
+  }
+
+  #navLinks li:last-child {
+    border-bottom: none;
+  }
+
+  #navLinks li a {
+    /* making the items big as the container */
     display: block;
+  }
+
+  /* is toggle by the script */
+  #navLinks.open {
+    display: flex;
+    flex-direction: column;
+    /* remove the default gap */
+    gap: 0;
   }
 }

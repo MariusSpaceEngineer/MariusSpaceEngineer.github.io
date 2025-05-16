@@ -20,10 +20,6 @@ const sendMail = (recipientEmail) => {
 };
 
 function toggleNavMenu() {
-  var x = document.getElementById("navLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+  var navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("open");
 }
