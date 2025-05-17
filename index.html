@@ -6,16 +6,26 @@
     <title>Marius Stoica</title>
     <link rel="stylesheet" href="./assets/css/index/reset.css" />
     <link rel="stylesheet" href="./assets/css/index/nav.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <a href="#">Marius Stoica - Software Engineer</a>
+        <a id="navTitle" href="#">Marius Stoica - Software Engineer</a>
 
-        <button id="hamburgerButton" onclick="toggleNavMenu()">
+        <button id="navButton" onclick="toggleNavMenu()">
           <img
+            id="hamburgerIcon"
             src="./assets/images/index/icons/hamburgerIcon.svg"
             alt="Hamburger Icon"
+          />
+          <img
+            id="closeIcon"
+            src="./assets/images/index/icons/closeIcon.svg"
+            alt="Close Icon"
           />
         </button>
 

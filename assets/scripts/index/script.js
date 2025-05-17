@@ -21,5 +21,25 @@ const sendMail = (recipientEmail) => {
 
 function toggleNavMenu() {
   var navLinks = document.getElementById("navLinks");
+  var hamburgerIcon = document.getElementById("hamburgerIcon");
+  var closeIcon = document.getElementById("closeIcon");
+
+  // When the navLinks ia open we hide the hamburger icon and show the close icon
   navLinks.classList.toggle("open");
+  hamburgerIcon.classList.toggle("hidden");
+  closeIcon.classList.toggle("display");
+
+  if (navLinks.classList.contains("open")) {
+    var links = navLinks.querySelectorAll("a");
+    links.forEach(function (link) {
+      //When a links is clicked we hide the navLinks and show the hamburger icon
+      // and show the close icon
+      link.addEventListener("click", function handleNavClick() {
+        navLinks.classList.remove("open");
+        hamburgerIcon.classList.remove("hidden");
+        closeIcon.classList.remove("display");
+        link.removeEventListener("click", handleNavClick);
+      });
+    });
+  }
 }

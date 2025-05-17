@@ -7,11 +7,17 @@ header {
   margin: 0 auto; /* center the header */
   padding: 25px 0; /* center the items vertically */
 
+  font-family: "Montserrat", serif;
+
   @media (max-width: 768px) {
     /* remove the clip-path on small screen as it causes issues with the nav items */
     clip-path: none;
     width: 100vw;
   }
+}
+
+#navTitle {
+  font-size: 1.2em;
 }
 
 nav {
@@ -44,7 +50,7 @@ nav a {
     /* shape of the nav */
     /* when screen is small, hide the nav items */
     display: none;
-    height: fit-content;
+    height: 100vh;
 
     /* position of the nav items */
     /* use position absolute to make the items not affect the layout */
@@ -52,20 +58,30 @@ nav a {
     /* position the items below the nav, the height of the nav is 80px 
     so this assures is below it */
     inset: 80px auto auto 0;
+
+    font-size: 3.5em;
   }
 }
 
-#hamburgerButton {
+/* is toggle by the script */
+#navLinks.open {
+  display: flex;
+  flex-direction: column;
+  /* remove the default gap */
+  gap: 0;
+}
+
+#navButton {
   /* when screen is big, hide the hamburger icon */
   display: none;
+
+  width: 30px;
+  height: 30px;
 
   /* remove the default button style */
   background: none;
   border: none;
   cursor: pointer;
-
-  width: 30px;
-  height: 30px;
 
   @media (max-width: 768px) {
     display: flex;
@@ -75,10 +91,25 @@ nav a {
   }
 }
 
+#closeIcon {
+  display: none;
+
+  width: 35px;
+  height: 35px;
+}
+
+#hamburgerIcon.hidden {
+  display: none;
+}
+
+#closeIcon.display {
+  display: block;
+}
+
 @media (max-width: 768px) {
   #navLinks li {
     text-align: center;
-    /* margin: 10px 0; */
+
     width: 100vw;
     padding: 10px 0;
 
@@ -89,20 +120,8 @@ nav a {
     border-top: 2px solid white;
   }
 
-  #navLinks li:last-child {
-    border-bottom: none;
-  }
-
   #navLinks li a {
     /* making the items big as the container */
     display: block;
-  }
-
-  /* is toggle by the script */
-  #navLinks.open {
-    display: flex;
-    flex-direction: column;
-    /* remove the default gap */
-    gap: 0;
   }
 }
