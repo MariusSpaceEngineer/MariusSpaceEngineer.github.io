@@ -7,8 +7,6 @@ header {
   margin: 0 auto; /* center the header */
   padding: 25px 0; /* center the items vertically */
 
-  font-family: "Montserrat", serif;
-
   @media (max-width: 768px) {
     /* remove the clip-path on small screen as it causes issues with the nav items */
     clip-path: none;
