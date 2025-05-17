@@ -1,54 +1,67 @@
-/* TODO: fix grid in media queries */
-
 main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
 
-  height: 95vh;
+  height: 90vh;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1317px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 90vh;
+  }
+
+  /* We turn the grid columns into rows */
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 95vh;
+    grid-template-rows: 2fr 1fr 1fr;
+    height: 90vh;
   }
 }
 
 #mainCube {
   grid-column: 1;
   grid-row: 1;
+  /* The cube becomes too big after 1317px */
   width: 20%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1317px) {
     width: 30%;
-    height: auto;
   }
 }
 
 #mainLeft {
   grid-column: 1;
   grid-row: 1;
-
-  @media (max-width: 768px) {
-    grid-column: 1;
-    grid-row: 1;
-  }
 }
 
 main h1 {
-  font-size: 5em;
+  font-size: 6em;
   font-weight: 100;
 
   margin-left: 4rem;
 
+  @media (max-width: 1317px) {
+    font-size: 4.5em;
+    margin-left: 2rem;
+    text-align: center;
+  }
+
   @media (max-width: 1024px) {
-    font-size: 5em;
+    font-size: 6em;
   }
 
   @media (max-width: 768px) {
+    font-size: 5em;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 4em;
+  }
+
+  @media (max-width: 480px) {
     font-size: 3em;
     margin-left: 0;
-    text-align: center;
   }
 }
 
@@ -57,8 +70,14 @@ main h1 span {
   font-weight: 600;
   margin-left: 4rem;
 
+  @media (max-width: 1024px) {
+    font-size: 0.7em;
+    margin-left: 2rem;
+    text-align: center;
+  }
+
   @media (max-width: 768px) {
-    margin-left: 0;
+    margin-left: 1rem;
   }
 }
 
@@ -69,8 +88,26 @@ main h1 span {
 }
 
 #mainLeft #figures img {
-  width: 25%;
-  height: auto;
+  /* The images are too big after 1317px */
+  width: 22%;
+
+  @media (max-width: 1317px) {
+    width: 30%;
+    margin: 0 -1.2rem;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0 -1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 -0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 40%;
+    margin: 0 -1.5rem;
+  }
 }
 
 #mainRight {
@@ -82,7 +119,11 @@ main h1 span {
 
   margin-bottom: 8rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1317px) {
+    align-self: center;
+  }
+
+  @media (max-width: 1024px) {
     grid-column: 1;
     grid-row: 2;
     margin-bottom: 0;
@@ -92,14 +133,21 @@ main h1 span {
 
 #mainRight p {
   font-size: 2em;
+  margin: 0 5rem;
 
   @media (max-width: 1024px) {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   @media (max-width: 768px) {
-    font-size: 1.2em;
-    margin: 0 2rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 1.4em;
+    margin-left: 0;
   }
 }
 
@@ -114,12 +162,12 @@ main h1 span {
   padding: 1.2rem 2rem;
 
   @media (max-width: 1024px) {
-    font-size: 2em;
+    font-size: 3em;
+    padding: 0.8rem 1.5rem;
   }
 
-  @media (max-width: 768px) {
-    font-size: 1.2em;
-    padding: 0.8rem 1.5rem;
+  @media (max-width: 640px) {
+    font-size: 1.4em;
   }
 }
 
@@ -145,12 +193,10 @@ main h1 span {
   align-items: center;
 
   @media (max-width: 1024px) {
-    width: 30%;
-  }
-
-  @media (max-width: 768px) {
     grid-column: 1;
     grid-row: 3;
+
+    margin-top: 2rem;
 
     width: 50%;
   }
