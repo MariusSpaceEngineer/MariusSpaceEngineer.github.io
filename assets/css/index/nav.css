@@ -68,8 +68,10 @@ nav a {
   height: 30px;
 
   @media (max-width: 768px) {
-    /* when screen is small, show the hamburger icon */
-    display: block;
+    display: flex;
+    /* center the icon in the button */
+    justify-content: center;
+    align-items: center;
   }
 }
 
