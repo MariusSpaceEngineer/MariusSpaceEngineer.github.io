@@ -1,0 +1,162 @@
+/* TODO: fix grid in media queries */
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  height: 95vh;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 95vh;
+  }
+}
+
+#mainCube {
+  grid-column: 1;
+  grid-row: 1;
+  width: 20%;
+
+  @media (max-width: 768px) {
+    width: 30%;
+    height: auto;
+  }
+}
+
+#mainLeft {
+  grid-column: 1;
+  grid-row: 1;
+
+  @media (max-width: 768px) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+main h1 {
+  font-size: 5em;
+  font-weight: 100;
+
+  margin-left: 4rem;
+
+  @media (max-width: 1024px) {
+    font-size: 5em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 3em;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+main h1 span {
+  font-size: 0.6em;
+  font-weight: 600;
+  margin-left: 4rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+#mainLeft #figures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainLeft #figures img {
+  width: 25%;
+  height: auto;
+}
+
+#mainRight {
+  grid-column: 2;
+  grid-row: 1;
+
+  align-self: self-end;
+  text-align: center;
+
+  margin-bottom: 8rem;
+
+  @media (max-width: 768px) {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 0;
+    align-self: self-start;
+  }
+}
+
+#mainRight p {
+  font-size: 2em;
+
+  @media (max-width: 1024px) {
+    font-size: 2em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+    margin: 0 2rem;
+  }
+}
+
+#mainRight button {
+  border-radius: 60px;
+  border: none;
+  background-color: #395886;
+
+  font-size: 2em;
+
+  margin: 1rem auto 0 auto;
+  padding: 1.2rem 2rem;
+
+  @media (max-width: 1024px) {
+    font-size: 2em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+#mainRight button a {
+  text-decoration: none;
+  color: white;
+}
+
+#bottomButton {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  justify-self: center;
+  align-self: self-end;
+
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background-color: #f0f3fa;
+
+  width: 25%;
+  height: 10vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    width: 30%;
+  }
+
+  @media (max-width: 768px) {
+    grid-column: 1;
+    grid-row: 3;
+
+    width: 50%;
+  }
+}
+
+#bottomButton img {
+  margin: 0 auto;
+  width: 20%;
+}
