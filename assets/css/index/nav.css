@@ -2,7 +2,8 @@ header {
   /* size & shape of the header */
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   background-color: #f0f3fa;
-  height: 80px; /* to keep the height no matter the screen height */
+  /* height: 80px; to keep the height no matter the screen height */
+  height: 10vh;
   width: 90%;
   margin: 0 auto; /* center the header */
   padding: 25px 0; /* center the items vertically */
@@ -49,13 +50,15 @@ nav a {
     /* when screen is small, hide the nav items */
     display: none;
     height: 100vh;
+    /* make sure the links are on top of all the items */
+    z-index: 1;
 
     /* position of the nav items */
     /* use position absolute to make the items not affect the layout */
     position: absolute;
-    /* position the items below the nav, the height of the nav is 80px 
+    /* position the items below the nav, the height of the nav is 10vh, 
     so this assures is below it */
-    inset: 80px auto auto 0;
+    inset: 10vh auto auto 0;
 
     font-size: 3.5em;
   }
@@ -111,7 +114,7 @@ nav a {
     width: 100vw;
     padding: 10px 0;
 
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(0, 0, 0);
   }
 
   #navLinks li:first-child {
