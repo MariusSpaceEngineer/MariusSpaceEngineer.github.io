@@ -7,7 +7,7 @@ main {
 
   height: 95vh;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 95vh;
@@ -43,12 +43,16 @@ main h1 {
 
   @media (max-width: 1024px) {
     font-size: 5em;
+    margin-left: 0;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
+    font-size: 4em;
+  }
+
+  @media (max-width: 480px) {
     font-size: 3em;
-    margin-left: 0;
-    text-align: center;
   }
 }
 
@@ -71,6 +75,10 @@ main h1 span {
 #mainLeft #figures img {
   width: 25%;
   height: auto;
+
+  @media (max-width: 1024px) {
+    width: 30%;
+  }
 }
 
 #mainRight {
@@ -82,7 +90,7 @@ main h1 span {
 
   margin-bottom: 8rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     grid-column: 1;
     grid-row: 2;
     margin-bottom: 0;
@@ -95,11 +103,16 @@ main h1 span {
 
   @media (max-width: 1024px) {
     font-size: 2em;
+    margin: 0 2rem;
   }
 
   @media (max-width: 768px) {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 480px) {
     font-size: 1.2em;
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
 }
 
@@ -114,12 +127,16 @@ main h1 span {
   padding: 1.2rem 2rem;
 
   @media (max-width: 1024px) {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   @media (max-width: 768px) {
-    font-size: 1.2em;
     padding: 0.8rem 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2em;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -145,6 +162,9 @@ main h1 span {
   align-items: center;
 
   @media (max-width: 1024px) {
+    grid-column: 1;
+    grid-row: 3;
+
     width: 30%;
   }
 
