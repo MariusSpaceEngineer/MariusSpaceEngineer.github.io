@@ -1,0 +1,82 @@
+#projects h2 {
+  font-size: 5em;
+  font-weight: 100;
+
+  margin: 2rem 5rem;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 4em;
+  }
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  gap: 10vw;
+
+  margin: 2rem 5rem;
+  padding: 2rem;
+
+  border: 10px solid #f1f3fa;
+  border-radius: 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 5vw;
+
+    margin: 2rem 0.5rem;
+  }
+}
+
+.projectLeft h3 {
+  font-size: 2.5em;
+
+  @media (max-width: 1024px) {
+    font-size: 2em;
+  }
+}
+
+.projectDescription {
+  font-size: 1.5em;
+  text-align: justify;
+
+  margin: 2rem 25% 2rem 0;
+
+  @media (max-width: 1024px) {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+
+.projectLeft button {
+  border-radius: 60px;
+  border: none;
+
+  background-color: #395886;
+
+  font-size: 1.5em;
+
+  padding: 1.2rem 2rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.2em;
+  }
+}
+
+.projectLeft button a {
+  text-decoration: none;
+  color: white;
+}
+
+#nepsisVideo {
+  border-radius: 20px;
+
+  width: 20%;
+  height: auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
