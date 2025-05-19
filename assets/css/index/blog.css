@@ -1,0 +1,24 @@
+#blog {
+  background-color: #f0f0f0;
+  padding: 2rem 5rem;
+  border-radius: 5px;
+}
+
+#blog h2 {
+  font-size: 5em;
+  font-weight: 100;
+
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 4em;
+  }
+}
+
+#blog p {
+  font-size: 1.5em;
+
+  text-align: center;
+  margin: 2rem 25%;
+}
