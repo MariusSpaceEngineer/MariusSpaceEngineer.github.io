@@ -18,7 +18,6 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 
   @media (max-width: 1024px) {
@@ -32,6 +31,8 @@
   font-size: 5em;
   font-weight: 100;
 
+  margin: 0 5rem;
+
   @media (max-width: 768px) {
     text-align: center;
     font-size: 4em;
@@ -44,15 +45,14 @@
 }
 
 #aboutLeft h2 span {
-  justify-self: flex-end;
-  align-self: self-end;
   font-size: 0.6em;
 }
 
 #aboutLeft p {
   font-size: 1.5em;
   font-weight: 200;
-  margin: 0 4rem;
+
+  margin: 2rem 5rem;
 
   @media (max-width: 768px) {
     text-align: center;
