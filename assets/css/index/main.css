@@ -5,6 +5,9 @@ main {
 
   height: 90vh;
 
+  /* To prevent horizontal and vertical (of the main) scrolling */
+  overflow: hidden;
+
   @media (max-width: 1317px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
